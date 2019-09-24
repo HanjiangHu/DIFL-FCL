@@ -18,7 +18,7 @@ class TestOptions(BaseOptions):
                                  help='read each image once from folders in sequential order')
 
         self.parser.add_argument('--which_slice', type=int, default=2,
-                                 help='which slice of images to be test for CMU-Seasons dataset')
+                                 help='which slice of images to be tested for CMU-Seasons dataset')
         self.parser.add_argument('--test_using_cos', action='store_true',
                                  help='use cosine distance as retrieval metric while testing')
         self.parser.add_argument('--resize_to_crop_size', action='store_true',

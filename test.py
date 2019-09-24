@@ -28,7 +28,7 @@ class Tester():
         else:
             metric_mode = "l2"
         # Open the result txt file
-        self.result_file = open("result_" + self.opt.name + "_" + str(self.opt.which_epoch) + '_s' + str(
+        self.result_file = open(self.opt.results_dir + self.opt.name + "_" + str(self.opt.which_epoch) + '_s' + str(
             self.opt.which_slice) + "_" + metric_mode + ".txt", 'w')
 
     def test(self):

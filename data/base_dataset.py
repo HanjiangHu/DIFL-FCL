@@ -27,10 +27,10 @@ def get_transform(opt):
         if 'crop' in opt.resize_or_crop:
             transform_list.append(transforms.RandomCrop(opt.fineSize))
         if not opt.no_flip:
-            if opt.random_flip:
-                transform_list.append(transforms.RandomHorizontalFlip(p=0.5))
-            else:
+            if opt.no_random_flip:
                 transform_list.append(transforms.RandomHorizontalFlip(p=0))
+            else:
+                transform_list.append(transforms.RandomHorizontalFlip(p=0.5))
     else:
         # For testing
         if 'resize' in opt.resize_or_crop:
@@ -56,10 +56,10 @@ def get_transform_flip(opt):
     if 'crop' in opt.resize_or_crop:
         transform_list.append(transforms.RandomCrop(opt.fineSize))
     if not opt.no_flip:
-        if opt.random_flip:
-            transform_list.append(transforms.RandomHorizontalFlip(p=0.5))
-        else:
+        if opt.no_random_flip:
             transform_list.append(transforms.RandomHorizontalFlip(p=1.0))
+        else:
+            transform_list.append(transforms.RandomHorizontalFlip(p=0.5))
 
     transform_list += [transforms.ToTensor(),
                        transforms.Normalize((0.5, 0.5, 0.5),

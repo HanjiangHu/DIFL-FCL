@@ -16,7 +16,7 @@ class BaseOptions():
                                  help='models are saved here')
 
         self.parser.add_argument('--dataroot', required=True, type=str,
-                                 help='path to images (should have subfolders trainA, trainB, valA, valB, etc)')
+                                 help='path to images should have subfolders trainA, trainB and every slice images')
         self.parser.add_argument('--n_domains', required=True, type=int,
                                  help='Number of domains to transfer among')
 
@@ -27,10 +27,9 @@ class BaseOptions():
                                  help='scaling and cropping of images at load time [resize|resize_and_crop|crop]')
         self.parser.add_argument('--no_flip', action='store_true',
                                  help='if specified, do not flip the images for data augmentation')
-
-        self.parser.add_argument('--random_flip', action='store_true',
-                                 help='if specified, flip the images randomly at 50 percent possibility'
-                                      'for both two branches while loading images')
+        self.parser.add_argument('--no_random_flip', action='store_true',
+                                 help='if specified, only flip the images on the B pass instead of randomly flipping'
+                                      'at 50 percent possibility for both passes while loading images')
         self.parser.add_argument('--loadSize', type=int, default=286, help='scale images to this size')
         self.parser.add_argument('--fineSize', type=int, default=256, help='then crop to this size')
 
@@ -58,8 +57,8 @@ class BaseOptions():
                                  help='# threads for loading data')
 
         self.parser.add_argument('--display_id', type=int, default=0,
-                                 help='window id of the web display (set >1 to use visdom)')
-        self.parser.add_argument('--display_port', type=int, default=6006, help='visdom port of the web display')
+                                 help='window id of the web display (set >0 to use visdom)')
+        self.parser.add_argument('--display_port', type=int, default=8097, help='visdom port of the web display')
         self.parser.add_argument('--display_winsize', type=int, default=256, help='display window size')
         self.parser.add_argument('--display_single_pane_ncols', type=int, default=0,
                                  help='if positive, display all images in a single visdom web panel with certain number'
