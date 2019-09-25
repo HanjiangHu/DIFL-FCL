@@ -5,7 +5,7 @@ This is our Pytorch implementation for DIFL-FCL. Code was written by [Hanjiang H
 If you use this code in your own work, please cite this paper:
 
 H. Hu, H. Wang, Z. Liu, C. Yang, W. Chen, and L. Xie
-”[Retrieval-based Localization Based on Domain-invariant Feature Learning under Changing Environments](https://arxiv.org/abs/1711.10228)”,  
+”[Retrieval-based Localization Based on Domain-invariant Feature Learning under Changing Environments](https://arxiv.org/pdf/1909.10184.pdf)”,  
 IROS 2019
 
 <img src='img/fig1.png' align="center" width=666>
@@ -42,7 +42,7 @@ The dataset we use in this paper is from CMU-Seasons [HERE](https://www.visuallo
 
 Note that the number order of `trainXX` and `testXX` folders is strictly consistent with the environmental condition order introduced in [README_CMU-Seasons.md](https://drive.google.com/drive/folders/1ZF2JmDfTafkS-oUc_7y0GU3QMasu709L), e.g. `train00` and `test00` correspond to the first environmental condition, i.e. the reference condition.
 
-Some of our pretrained models for the CMU-Seasons dataset are found [HERE](https://www.dropbox.com/s/mwqfbs19cptrej6/2DayGAN_Checkpoint150.zip?dl=0). Please uncompress it under the root path. The pretrained models in `cmu_urban`, `cmu_suburban` and `cmu_park` folders under `./checkpoints` are trained with FCL only using images of each area. The urban models at 300 epoch for transfer learning are also given. It is also encouraged to use urban models to test suburban and park images in order to test the generation ability.
+Some of our pretrained models for the CMU-Seasons dataset are found [HERE](https://drive.google.com/file/d/17xLVxUt0WVm97NU6K1frw7go1KjuuNbS/view?usp=sharing). Please uncompress it under the root path. The pretrained models in `cmu_urban`, `cmu_suburban` and `cmu_park` folders under `./checkpoints` are trained with L2-FCL only using images of each area. The urban models at 300 epoch for transfer learning are also given. It is also encouraged to use urban models to test suburban and park images in order to test the generation ability.
 
 Examples:
 - Train a model:
@@ -58,7 +58,7 @@ python train.py --continue_train --which_epoch 300 --name cmu_urban --dataroot .
 ```
 python test.py --phase test --name cmu_urban --dataroot ./datasets/CMU_urban/ --n_domains 12 --which_epoch 600 --serial_test --gpu_ids 0  --which_slice 2 --test_using_cos
 ```
-The test results will be saved to txt file here: `./results/cmu_urban_600_s2_cos.txt`.
+The test result will be saved to txt file here: `./results/cmu_urban_600_s2_cos.txt`.
 
 
 
