@@ -9,7 +9,12 @@ H. Hu, H. Wang, Z. Liu, C. Yang, W. Chen, and L. Xie
 IROS 2019
 
 ```
-@INPROCEEDINGS{8968047,  author={H. {Hu} and H. {Wang} and Z. {Liu} and C. {Yang} and W. {Chen} and L. {Xie}},  booktitle={2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},  title={Retrieval-based Localization Based on Domain-invariant Feature Learning under Changing Environments},   year={2019},  volume={},  number={},  pages={3684-3689}
+@inproceedings{hu2019DIFLFCL, 
+  author={H. {Hu} and H. {Wang} and Z. {Liu} and C. {Yang} and W. {Chen} and L. {Xie}}, 
+  booktitle={2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
+  title={Retrieval-based Localization Based on Domain-invariant Feature Learning under Changing Environments}, 
+  year={2019},  volume={},  number={},  
+  pages={3684-3689}
 }
 ```
 
