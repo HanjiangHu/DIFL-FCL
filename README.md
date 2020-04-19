@@ -5,8 +5,12 @@ This is our Pytorch implementation for DIFL-FCL. Code was written by [Hanjiang H
 If you use this code in your own work, please cite this paper:
 
 H. Hu, H. Wang, Z. Liu, C. Yang, W. Chen, and L. Xie
-”[Retrieval-based Localization Based on Domain-invariant Feature Learning under Changing Environments](https://arxiv.org/pdf/1909.10184.pdf)”,  
+”[Retrieval-based Localization Based on Domain-invariant Feature Learning under Changing Environments](https://ieeexplore.ieee.org/document/8968047)”,  
 IROS 2019
+
+'''
+@INPROCEEDINGS{8968047,  author={H. {Hu} and H. {Wang} and Z. {Liu} and C. {Yang} and W. {Chen} and L. {Xie}},  booktitle={2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},  title={Retrieval-based Localization Based on Domain-invariant Feature Learning under Changing Environments},   year={2019},  volume={},  number={},  pages={3684-3689},}
+'''
 
 <img src='img/fig1.png' align="center" width=666>
 <br><br>
