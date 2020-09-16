@@ -52,7 +52,7 @@ The dataset we use in this paper is from CMU-Seasons [HERE](https://www.visuallo
 
 Note that the number order of `trainXX` and `testXX` folders is strictly consistent with the environmental condition order introduced in [README_CMU-Seasons.md](https://drive.google.com/drive/folders/1ZF2JmDfTafkS-oUc_7y0GU3QMasu709L), e.g. `train00` and `test00` correspond to the first environmental condition, i.e. the reference condition.
 
-Some of our pretrained models for the CMU-Seasons dataset are found [HERE](https://drive.google.com/file/d/17xLVxUt0WVm97NU6K1frw7go1KjuuNbS/view?usp=sharing). Please uncompress it under the root path. The pretrained models in `cmu_urban`, `cmu_suburban` and `cmu_park` folders under `./checkpoints` are trained with L2-FCL only using images of each area. The urban models at 300 epoch for transfer learning are also given. It is also encouraged to use urban models to test suburban and park images in order to test the generation ability.
+Some of our pretrained models for the CMU-Seasons dataset are found [HERE](https://drive.google.com/file/d/1TVy6-Pd6b6FYArpl0lNIzx6YNey-nQaO/view?usp=sharing). Please uncompress it under the root path. The pretrained models in `cmu_urban`, `cmu_suburban` and `cmu_park` folders under `./checkpoints` are trained with L2-FCL only using images of each area. The urban models at 300 epoch for transfer learning are also given. It is also encouraged to use urban models to test suburban and park images in order to test the generation ability.
 
 Examples:
 - Train a model:
